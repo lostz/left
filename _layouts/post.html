@@ -1,16 +1,24 @@
 ---
 layout: layout
 ---
+<section class="content">
+  <section id="posts">
+    <header id="banner"><span id="dtTime"></span> <span class="warning">beta</span></header>
+    <article>
 
-  <article>
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+   
     <div class="meta"><span class="date">{{ page.date | date: "%B %e, %Y" }}</span></div>
     <div class="content">
-      <div class="content">
+      
+      
 
-  {{ content }}
-      </div>
+           {{ content }}
+  
+   </div>
   </article>
 
+  </section>
 
+</section>
 

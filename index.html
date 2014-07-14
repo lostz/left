@@ -4,13 +4,15 @@ title: "Posts"
 ---
 
 <section class="content">
-  <ul class="listing">
+<section id="posts">
+	  <header id="banner"><span id="dtTime"></span> <span class="warning">beta</span></header>
     {% for post in site.posts %}
-      {% unless post.draft %}
-      <li>
-        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endunless %}
+    	<article>
+    	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <div class="meta"><span class="date">{{ post.date | date: "%B %e, %Y" }}</span></div>
+          <div class="p_part">{{ post.excerpt }}</div>
+    
+    </article>
     {% endfor %}
-  </ul>
+      	</section>
 </section>
