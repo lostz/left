@@ -3,9 +3,11 @@ layout: post
 title: Sample draft post
 category: posts
 draft: true
+excerpt: This is a draft post that isn't ready for the wild. See how it doesn't show up in
 ---
 
 This is a draft post that isn't ready for the wild. See how it doesn't show up in your list of posts, nor in your RSS feed? You can, however, [link](/posts/draft/) directly to it.
+<!--more-->
 
 To make it go live, all you have to do is remove the `draft:true` line, and you're off to the races.
 

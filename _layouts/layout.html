@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <title>
@@ -14,47 +14,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ site.github.url }}/css/base.css" type="text/css" media="screen, projection" />
-  <link rel="stylesheet" href="{{ site.github.url }}/css/pygments.css" type="text/css" />
-  <link media="only screen and (max-device-width: 480px)" href="{{ site.github.url }}/css/mobile.css" type="text/css" rel="stylesheet" />
-  <link media="only screen and (device-width: 768px)" href="{{ site.github.url }}/css/mobile.css" type="text/css" rel="stylesheet" />
-  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
-  <link rel="apple-touch-icon" href="{{ site.github.url }}/apple-touch-icon.png" />
-
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ site.github.url }}/js/application.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
-  <section class="sidebar">
-    <a href="/">
-      <img src="{{ site.github.owner_gravatar_url }}?s=150" height="75" width="75" class="avatar" />
-    </a>
-
-    <section class="name">
+ <header id="sidebar">
+    <figure id="avatar">
       <a href="/">
-        <span id="fname">{{ site.name|split:' '|first }}</span>
-        <span id="lname">{{ site.name|split:' '|last }}</span>
+        <div class="pulse animate">&nbsp;</div>
+        <img class="logo" src="/_image/avatar.jpg" alt="诗云">
       </a>
-    </section>
-
-    <section class="meta">
-      <a href="{{ site.github.owner_url }}" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="/atom.xml"><i class="fa fa-rss"></i></a>
-    </section>
-
-    <section class="sections">
+    </figure>
+      <h1><a href="/">Hearken</a></h1>
+    <p class="description"></p>
       <ul>
-        <li><a href="/about.html">about</a></li>
-        <li><a href="/">posts</a></li>
+      
+      
+   
+      
+      
+        
+      
+  
       </ul>
-    </section>
-  </section>
-
-  {{ content }}
+    
+  </header>
+  <section id="posts">
+    <header id="banner"><span id="dtTime"></span> <span class="warning">beta</span></header>
+      {% for post in site.posts %}
+      <article>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <div class="meta"><span class="date">{{ page.date | date: "%B %e, %Y" }}</span></div>
+          <div class="p_part">{{ post.excerpt }}</p></div>
+    
+      </article>
+      {% endfor %}
+</section>
 </body>
 
 </html>
