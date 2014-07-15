@@ -1,49 +1,51 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A simple Blog.">
+<title>
     {% if page.title %}
-      {{ page.title }} &ndash;
+    {{ page.title }} &ndash;
     {% endif %}
     {{ site.name }}
-  </title>
-
-  <meta name="author" content="{{ site.name }}" />
-  <meta name="description" content="{{ site.description }}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</title>
+<link rel="stylesheet" type="text/css" href="/css/pure-min.css">
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="/css/grids-responsive-old-ie-min.css">  
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<link rel="stylesheet" href="/css/grids-responsive-min.css">  
+<!--<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="/css/blog-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<link rel="stylesheet" href="/css/blog.css">
+<!--<![endif]-->
 </head>
-
 <body>
- <header id="sidebar">
-    <figure id="avatar">
-      <a href="/">
-        <div class="pulse animate">&nbsp;</div>
-        <img class="logo" src="/images/avatar.jpg" alt="诗云">
-      </a>
-    </figure>
-      <h1><a href="/">Hearken</a></h1>
-    <p class="description"></p>
-      <ul>
+<div id="layout" class="pure-g">
+
+    <div class="sidebar pure-u-1 pure-u-md-1-5">
+
+        <div class="header">
+<img class="logo" src="/images/avatar.jpg" >
+            <hgroup>
+              
+                <h1 class="brand-title"><a href="/">Hearken Me</a></h1>
+                <h2 class="brand-tagline">静静倾听我</h2>
+            </hgroup>
+
+        </div>
+    </div>
       
       
-   
-      
-      
-        
-      
-  
-      </ul>
-    
-  </header>
 
 
     {{ content }}
 
-
+</div>
 </body>
 
 </html>
