@@ -38,6 +38,61 @@ img.logo {
     margin-left:-42px;
     border:2px solid #fff;
 }
+div.pulse {
+    position:absolute;
+    border-radius:50%;
+    width:120px;
+    height:120px;
+    border:10px solid #00a2ff;
+    left:50%;
+    top:50%;
+    margin-top:-70px;
+    margin-left:-70px
+}
+div.pulse.animate {
+    -webkit-animation-name:dotPulse;
+    -moz-animation-name:dotPulse;
+    -webkit-animation-duration:5s;
+    -moz-animation-duration:5s;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -moz-animation-timing-function:linear;
+    -webkit-transform:translateZ(0)
+}
+@-webkit-keyframes 'dotPulse'{
+    0% {
+        -webkit-transform:scale(0.55);opacity:.2
+    }
+    10% {
+        -webkit-transform:scale(0.65);opacity:.2
+    }
+    30% {
+        -webkit-transform:scale(0.7);opacity:.2
+    }
+    100% {
+        opacity:0;
+        -webkit-transform:scale(0.9)
+    }
+}
+@-moz-keyframes dotPulse {
+    0% {
+        -moz-transform:scale(0.7);
+        opacity:0
+    }
+    10% {
+        -moz-transform:scale(0.8);
+        opacity:.2
+    }
+    30% {
+        -moz-transform:scale(0.75);
+        opacity:.1
+    }
+    100% {
+        opacity:0;
+        -moz-transform:scale(1)
+    }
+}
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
