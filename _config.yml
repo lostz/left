@@ -7,7 +7,7 @@ gems:
   - jekyll-sitemap
 
 name: Hearken Me
-url: http://hearken.me
+url: hearken.me
 description: Please hearken me.
 twitter: noah_zh
 excerpt_separator: <!--more-->
