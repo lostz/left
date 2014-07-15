@@ -22,6 +22,7 @@ figure {margin:0;}
 #avatar {
 position: absolute;
 left: 30px;
+
 top: 30px;
 width: 120px;
 height: 120px;
@@ -33,6 +34,7 @@ img.logo {
     width:80px;
     height:80px;
     left:50%;
+
     top:50%;
     margin-top:-42px;
     margin-left:-42px;
@@ -44,8 +46,9 @@ div.pulse {
     width:120px;
     height:120px;
     border:10px solid #00a2ff;
-    left:50%;
-    top:50%;
+    left:56%;
+    top:59%;
+
     margin-top:-70px;
     margin-left:-70px
 }
